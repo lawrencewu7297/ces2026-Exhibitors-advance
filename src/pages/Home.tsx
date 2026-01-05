@@ -39,7 +39,7 @@ export default function Home() {
     exhibitors.forEach(e => {
         if(e.booths) {
             // Simple heuristic for venue: take first part before comma or '—'
-            const mainVenue = e.booths.split(/[—,]/)[0].trim();
+            const mainVenue = e.booths.split('—')[0].trim();
             if(mainVenue) vSet.add(mainVenue);
         }
         if(e.国家) cSet.add(e.国家);
